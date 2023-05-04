@@ -3,6 +3,7 @@
 body {
   background-color: #e2e4df;
   font-family: 'Geo', sans-serif;
+  font-size: 1rem;
   color: #f1b4b4;
   text-shadow: 1px 1px grey;
 }
@@ -15,11 +16,24 @@ body {
 }
 
 .mt-50 {
-  margin-top: 250px;
+  margin-top: 235px;
 }
 
 .winner > button {
-  background: url("../src/assets/images/tacobg.jpg")
+  background-color: #e4dba0;
+  font-family: 'Geo', sans-serif;
+  color: whitesmoke;
+  text-shadow: 1px 1px grey;
+  height: 50px;
+  width: 150px;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 10%;
+}
+
+.winner > button:hover {
+  transform: scale(1.1);
+  transition: transform .2s;
 }
 
 .floating { 

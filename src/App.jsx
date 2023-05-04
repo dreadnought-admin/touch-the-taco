@@ -5,16 +5,13 @@ import burrito from "../src/assets/images/18_burrito.png"
 
 const App = () => {
 
-  const [countIsTen, setCountIsTen] = useState(false);
+  const [countIsTwentyFive, setCountIsTwentyFive] = useState(false);
   const [count, setCount] = useState(0)
   const [checkCount, setCheckCount] = useState(false);
 
   const handleTacoClick = (e) => {
-    if (count >= 50) {
+    if (count < 50) {
       setCount(count => count += 1);
-    }
-    else {
-      return null 
     }
    }
 
@@ -27,30 +24,30 @@ const App = () => {
     }
    };
 
-   const checkIfTen = () => {
-    if (count >= 10) {
-      setCountIsTen(true)
+   const checkIfTwentyFive = () => {
+    if (count >= 25) {
+      setCountIsTwentyFive(true)
     }
     else {
-      setCountIsTen(false)
+      setCountIsTwentyFive(false)
     }
    };
 
    useEffect(() => {
     handleCheckCount();
-    checkIfTen();
+    checkIfTwentyFive();
    })
 
   return (
     <>
       <div className="floating center mt-50">
-          <button onClick={handleTacoClick}><img src={countIsTen ? burrito : taco}/></button>
+          <button onClick={handleTacoClick}><img src={countIsTwentyFive ? burrito : taco}/></button>
       </div>
       <div className="center">
-        {countIsTen ? <h1>Woah! Burrito Time!</h1> : <h1>Touch the taco.</h1>}
+        {countIsTwentyFive ? <h1>Woah! Burrito Time!</h1> : <h1>Touch the taco.</h1>}
       </div>
       <div className="center">
-        {checkCount  ? <p>You clicked the {countIsTen ? "burrito" : "taco" } {count} times.</p> : <p>Go on. Do it.</p>}
+        {checkCount  ? <p>You clicked the {countIsTwentyFive ? "burrito" : "taco" } {count} times.</p> : <p>Go on. Do it.</p>}
       </div>
       <div className="center">
         { count >= 50 ?  <Winner count={count} setCount={setCount}/> : null}
