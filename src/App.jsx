@@ -47,7 +47,7 @@ const App = () => {
         {countIsTwentyFive ? <h1>Woah! Burrito Time!</h1> : <h1>Touch the taco.</h1>}
       </div>
       <div className="center">
-        {checkCount  ? <p>You clicked the {countIsTwentyFive ? "burrito" : "taco" } {count} times.</p> : <p>Go on. Do it.</p>}
+        {checkCount  ? <p>You touched the {countIsTwentyFive ? "burrito" : "taco" } {count} times.</p> : <p>Go on. Do it.</p>}
       </div>
       <div className="center">
         { count >= 50 ?  <Winner count={count} setCount={setCount}/> : null}
