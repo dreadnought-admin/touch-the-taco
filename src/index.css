@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+
+body {
+  background-color: #e2e4df;
+  font-family: 'Geo', sans-serif;
+  color: #f1b4b4;
+  text-shadow: 1px 1px grey;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mt-50 {
+  margin-top: 250px;
+}
+
+.winner > button {
+  background: url("../src/assets/images/tacobg.jpg")
+}
+
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.floating > button {
+  background: transparent;
+  border: none;
+}
+
+.floating > button > img {
+  height: 75px;
+  width: 75px;
+  cursor: pointer;
+}
+
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
