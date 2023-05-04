@@ -13,7 +13,7 @@ const Winner = ({ count, setCount }) => {
 
   return (
     <div className="winner">
-        <h1>¡Dios mío!</h1>
+        <h1>🥑 ¡Dios mío! 🥑</h1>
         <h1>You won!</h1>
         <button onClick={handleResetGame}>Play Again?</button>
     </div>
