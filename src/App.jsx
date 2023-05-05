@@ -36,10 +36,10 @@ const App = () => {
    useEffect(() => {
     handleCheckCount();
     checkIfTwentyFive();
-   })
+   });
 
   return (
-    <>
+    <div className="app">
       <div className="floating center mt-50">
           <button onClick={handleTacoClick}><img src={countIsTwentyFive ? burrito : taco}/></button>
       </div>
@@ -49,10 +49,10 @@ const App = () => {
       <div className="center">
         {checkCount  ? <p>You touched the {countIsTwentyFive ? "burrito" : "taco" } {count} times.</p> : <p>Go on. Do it.</p>}
       </div>
-      <div className="center">
+      <div className="center mb-15">
         { count >= 50 ?  <Winner count={count} setCount={setCount}/> : null}
       </div>  
-    </>
+    </div>
   )
 }
 
